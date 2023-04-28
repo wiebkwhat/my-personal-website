@@ -1,0 +1,181 @@
+@font-face {
+  font-family: "ABCFavoritArabic-Light-Trial";
+  src: url("../assets/ABCFavoritArabic-Light-Trial.woff2");
+  src: url("../assets/ABCFavoritArabic-Light-Trial.eot?#iefix")
+      format("embedded-opentype"),
+    url("../assets/ABCFavoritArabic-Light-Trial.woff2") format("woff2"),
+    url("../assets/ABCFavoritArabic-Light-Trial.woff") format("woff"),
+    url("../assets/ABCFavoritArabic-Light-Trial") format("truetype"),
+    url("assets/ABCFavoritArabic-Light-Trial.otf#svg") format("svg");
+}
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+.magic h1 {
+  color: blue;
+}
+.magic p {
+}
+body {
+  background-color: white;
+  font-family: ABCFavoritArabic-Light-Trial;
+  font-weight: lighter;
+  color: white;
+}
+#page-title {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+}
+
+article {
+  display: flex;
+  box-sizing: border-box;
+}
+section {
+  display: flex;
+  justify-content: space-around;
+  gap: 20vw;
+}
+
+#extra {
+  display: flex;
+  position: fixed;
+  background-color: red;
+  bottom: 0;
+}
+
+#cv {
+  border-radius: 0 0 20px 20px;
+  height: 5vw;
+  width: 20vw;
+}
+
+#aktuelles,
+#info,
+#downloads,
+#archiv {
+  position: fixed;
+  width: 50vw;
+  height: 50vh;
+  transition: width 0.3s ease, height 0.3s ease;
+}
+#aktuelles .tile-title,
+#info .tile-title,
+#downloads .tile-title,
+#archiv .tile-title {
+  position: absolute;
+  z-index: 10;
+  color: white;
+  font-size: 2rem;
+  transition: ease 1s;
+}
+.tile-title:hover {
+  transform-origin: right;
+  transform: rotate(-90deg);
+}
+
+#aktuelles .content,
+#info .content,
+#downloads .content,
+#archiv .content {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  background-color: red;
+  border-radius: 50px;
+  overflow: scroll;
+  padding: 3vw;
+}
+
+#aktuelles {
+  top: 0;
+  left: 0;
+  background-color: #fabae7;
+  border-top-right-radius: 2rem;
+  border-top-left-radius: 2rem;
+}
+#aktuelles .tile-title {
+  right: 2rem;
+  top: 0rem;
+  background-color: pink;
+  border-radius: 100px;
+}
+
+#aktuelles .content {
+  background: #fabae7;
+  background: radial-gradient(
+    circle,
+    rgba(250, 186, 231, 1) 2%,
+    rgba(202, 255, 67, 1) 100%
+  );
+}
+#downloads {
+  bottom: 0;
+  left: 0;
+  background-color: #fabae7;
+  border-bottom-right-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+}
+#downloads .tile-title {
+  right: 1rem;
+  top: 1rem;
+}
+#downloads .content {
+  background: #fabae7;
+  background: radial-gradient(
+    circle,
+    rgba(250, 186, 231, 1) 0%,
+    rgba(38, 23, 112, 1) 52%
+  );
+}
+#info {
+  top: 0;
+  right: 0;
+  background-color: #261770;
+  border-top-right-radius: 2rem;
+  border-top-left-radius: 2rem;
+}
+#info .tile-title {
+  right: 1rem;
+  top: 1rem;
+}
+#info .content {
+  background: #261770;
+  background: radial-gradient(
+    circle,
+    rgba(38, 23, 112, 1) 2%,
+    rgba(251, 194, 65, 1) 100%
+  );
+}
+#info img {
+  width: 44%;
+  height: auto;
+}
+#archiv {
+  bottom: 0;
+  right: 0;
+  background-color: #261770;
+  border-bottom-right-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+}
+#archiv .tile-title {
+  right: 1rem;
+  top: 1rem;
+}
+#archiv .content {
+  background: #261770;
+  background: radial-gradient(
+    circle,
+    rgba(38, 23, 112, 1) 0%,
+    rgba(250, 186, 231, 1) 81%
+  );
+}
