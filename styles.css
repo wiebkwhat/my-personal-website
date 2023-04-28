@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "assets/ABCFavoritArabic-Light-Trial";
+  font-family: "ABCFavoritArabic-Light-Trial";
   src: url("../assets/ABCFavoritArabic-Light-Trial.woff2");
   src: url("../assets/ABCFavoritArabic-Light-Trial.eot?#iefix")
       format("embedded-opentype"),
@@ -15,7 +15,7 @@ html {
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 .magic h1 {
   color: blue;
@@ -33,6 +33,30 @@ body {
   top: 1rem;
   left: 1rem;
 }
+
+article {
+  display: flex;
+  box-sizing: border-box;
+}
+section {
+  display: flex;
+  justify-content: space-around;
+  gap: 20vw;
+}
+
+#extra {
+  display: flex;
+  position: fixed;
+  background-color: red;
+  bottom: 0;
+}
+
+#cv {
+  border-radius: 0 0 20px 20px;
+  height: 5vw;
+  width: 20vw;
+}
+
 #aktuelles,
 #info,
 #downloads,
@@ -50,7 +74,13 @@ body {
   z-index: 10;
   color: white;
   font-size: 2rem;
+  transition: ease 1s;
 }
+.tile-title:hover {
+  transform-origin: right;
+  transform: rotate(-90deg);
+}
+
 #aktuelles .content,
 #info .content,
 #downloads .content,
@@ -74,9 +104,12 @@ body {
   border-top-left-radius: 2rem;
 }
 #aktuelles .tile-title {
-  right: 1rem;
-  top: 1rem;
+  right: 2rem;
+  top: 0rem;
+  background-color: pink;
+  border-radius: 100px;
 }
+
 #aktuelles .content {
   background: #fabae7;
   background: radial-gradient(
